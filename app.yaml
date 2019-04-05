@@ -7,18 +7,10 @@ handlers:
    static_dir: static
    secure: always
  
- - url: /greeting/.*
-   script: app.flask_template_file.app
-   secure: always
-
  - url: /.*
    script: app.flask_app.app
    secure: always
- 
- - url: /(index.html)?
-   static_files: index.html
-   upload: index.html
-   
+     
 libraries:
  - name: ssl
    version: latest
